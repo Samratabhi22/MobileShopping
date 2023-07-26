@@ -29,14 +29,12 @@ namespace MobileShopping.GenericUtilities
         [OneTimeSetUp]
         public void oneTimeLaunch()
         {
-            //string workingDirectory = Environment.CurrentDirectory;
-            //TestContext.Out.WriteLine(workingDirectory);
-            //string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            //TestContext.Out.WriteLine(projectDirectory);
-            // string reportPath = projectDirectory + "Results\\Reports\\index.html";
-            string reportPath = "C:\\Users\\Hp\\source\\repos\\MobileShopping\\MobileShopping\\Results\\Reports\\index.html";
-            TestContext.Out.WriteLine(reportPath);
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            string reportPath = projectDirectory + "\\Results\\Reports\\index.html";
             var htmlReporter=new ExtentHtmlReporter(reportPath);
+            htmlReporter.Config.DocumentTitle = "MobileShoppingTest";
+            htmlReporter.Config.ReportName = "Regression";
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
             extent.AddSystemInfo("Host Name","Local Host");
@@ -121,7 +119,7 @@ namespace MobileShopping.GenericUtilities
         [OneTimeTearDown]
         public void closeBrowser()
         {
-           //driver.Value.Quit();  
+            
         }
 
     }

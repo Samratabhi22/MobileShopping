@@ -33,7 +33,7 @@ namespace MobileShopping.GenericUtilities
         public void waitForCountryList(IWebDriver driver)
         {
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            \751
+        
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.LinkText("India")));
 
         }
