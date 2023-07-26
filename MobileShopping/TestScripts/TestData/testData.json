@@ -1,0 +1,9 @@
+{
+  "username": "rahulshettyacademy",
+  "password": "learning",
+  "locInitials": "ind",
+  "sucessText": "Success",
+  "username_wrong": "rahulshettyacamy",
+  "password_wrong": "learn",
+  "products": [ "iphone X", "Blackberry" ]
+}
